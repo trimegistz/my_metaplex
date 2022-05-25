@@ -45,8 +45,9 @@
     "test:all-local-mpl": "yarn test:build-local-mpl && yarn test:init-local-mpl && yarn test",
     "test": "jest --silent false",
     "test:watch": "jest --watch",
-    "prepare": "husky install",
+    "prepare": "npm run build",
     "link-mpl": "yarn link ../metaplex-program-library --private -r -A"
+    
   },
   "dependencies": {
     "@metaplex-foundation/mpl-auction": "^0.0.2",
