@@ -45,7 +45,7 @@
     "test:all-local-mpl": "yarn test:build-local-mpl && yarn test:init-local-mpl && yarn test",
     "test": "jest --silent false",
     "test:watch": "jest --watch",
-    "prepare": "npx husky install",
+    "prepare": "husky install",
     "link-mpl": "yarn link ../metaplex-program-library --private -r -A"
   },
   "dependencies": {
