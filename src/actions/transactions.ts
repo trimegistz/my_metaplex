@@ -26,10 +26,16 @@ export const sendTransaction = async ({
   let tx = Transaction.fromCombined(txs, { feePayer: wallet.publicKey });
   tx.recentBlockhash = (await connection.getRecentBlockhash()).blockhash;
 
+  console.log("HEYEHEYHEYHISLDFJHDJKLSFHSDJKLFH")
+  console.log(tx)
+
+
   if (signers.length) {
     tx.partialSign(...signers);
   }
   tx = await wallet.signTransaction(tx);
+
+
 
   return connection.sendRawTransaction(tx.serialize(), options);
 };
